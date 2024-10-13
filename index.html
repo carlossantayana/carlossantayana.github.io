@@ -779,33 +779,33 @@
           </div><!-- End Contact Form -->
 
           <script>
-            document.querySelector('.custom-email-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                fetch(event.target.action, {
-                    method: event.target.method,
-                    body: new FormData(event.target),
-                    headers: { 'Accept': 'application/json' }
-                }).then(response => {
-                    if (response.ok) {
-                        response.json().then(data => {
-                            if (data.ok) {
-                                document.querySelector('.custom-email-form .sent-message').style.display = 'block';
-                                document.querySelector('.custom-email-form .error-message').style.display = 'none';
-                            } else {
-                                document.querySelector('.custom-email-form .error-message').textContent = 'Oops! There was a problem submitting your form';
-                                document.querySelector('.custom-email-form .error-message').style.display = 'block';
-                            }
-                        });
+            document.querySelector('.custom-email-form').addEventListener('submit', function (event) {
+              event.preventDefault();
+              fetch(event.target.action, {
+                method: event.target.method,
+                body: new FormData(event.target),
+                headers: { 'Accept': 'application/json' }
+              }).then(response => {
+                if (response.ok) {
+                  response.json().then(data => {
+                    if (data.ok) {
+                      document.querySelector('.custom-email-form .sent-message').style.display = 'block';
+                      document.querySelector('.custom-email-form .error-message').style.display = 'none';
                     } else {
-                        document.querySelector('.custom-email-form .error-message').textContent = 'Oops! There was a problem submitting your form';
-                        document.querySelector('.custom-email-form .error-message').style.display = 'block';
+                      document.querySelector('.custom-email-form .error-message').textContent = 'Oops! There was a problem submitting your form';
+                      document.querySelector('.custom-email-form .error-message').style.display = 'block';
                     }
-                }).catch(error => {
-                    document.querySelector('.custom-email-form .error-message').textContent = 'Oops! There was a problem submitting your form';
-                    document.querySelector('.custom-email-form .error-message').style.display = 'block';
-                });
+                  });
+                } else {
+                  document.querySelector('.custom-email-form .error-message').textContent = 'Oops! There was a problem submitting your form';
+                  document.querySelector('.custom-email-form .error-message').style.display = 'block';
+                }
+              }).catch(error => {
+                document.querySelector('.custom-email-form .error-message').textContent = 'Oops! There was a problem submitting your form';
+                document.querySelector('.custom-email-form .error-message').style.display = 'block';
+              });
             });
-        </script>
+          </script>
 
         </div>
 

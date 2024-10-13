@@ -1049,16 +1049,44 @@ section,
     display: none; /* Oculta los mensajes por defecto */
 }
 
+.custom-email-form .error-message,
+.custom-email-form .sent-message {
+    padding: 15px; /* Añade un poco de espacio alrededor del mensaje */
+    border-radius: 5px; /* Redondea las esquinas */
+    margin-top: 10px; /* Añade un margen superior */
+}
+
+.custom-email-form .sent-message {
+    background-color: #d4edda; /* Color de fondo verde claro */
+    color: #155724; /* Color del texto verde oscuro */
+    border: 1px solid #c3e6cb; /* Borde verde claro */
+}
+
+.custom-email-form .error-message {
+    background-color: #f8d7da; /* Color de fondo rojo claro */
+    color: #721c24; /* Color del texto rojo oscuro */
+    border: 1px solid #f5c6cb; /* Borde rojo claro */
+}
+
+.custom-email-form {
+  background-color: var(--surface-color);
+  height: 100%;
+  padding: 30px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
 .custom-email-form button[type="submit"] {
-    background-color: #007bff; /* Color del botón */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Relleno */
-    cursor: pointer; /* Cambia el cursor a mano */
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 50px;
+  margin-top: 20px; /* Añade un margen superior al botón */
 }
 
 .custom-email-form button[type="submit"]:hover {
-    background-color: #0056b3; /* Color al pasar el ratón */
+  background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
 /* Otros estilos personalizados */
