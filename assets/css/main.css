@@ -1207,6 +1207,8 @@ section,
 --------------------------------------------------------------*/
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
+  max-height: 600px; /* Cambia 400px a la altura máxima que desees */
+  object-fit: contain; /* Ajusta la imagen manteniendo su proporción sin recortarla */
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination {
