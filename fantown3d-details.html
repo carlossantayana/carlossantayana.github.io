@@ -28,6 +28,55 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    /* Ajuste de separación entre secciones para este archivo */
+    section,
+    .section {
+      padding: 20px 0;
+      /* Cambia 20px al valor deseado */
+    }
+
+    .container {
+      margin-top: 2px;
+      /* Ajusta según el espacio deseado */
+      margin-bottom: 2px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      /* Centra el contenido horizontalmente */
+      align-items: center;
+      /* Centra el contenido verticalmente */
+      flex-direction: column;
+      /* Asegura que los elementos se apilen verticalmente */
+    }
+
+    .image-container img {
+      display: block;
+    }
+
+    .magnify-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2em;
+      /* Ajusta el tamaño según lo necesario */
+      color: rgba(255, 255, 255, 0.8);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      /* Permite que el clic pase a la imagen debajo */
+    }
+
+    .image-container:hover .magnify-icon {
+      opacity: 1;
+    }
+  </style>
+
   <!-- =======================================================
   * Template Name: iPortfolio
   * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
@@ -111,11 +160,6 @@
     <!-- Portfolio Details Section -->
     <section id="portfolio-details" class="portfolio-details section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Details</h2>
-      </div><!-- End Section Title -->
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4">
@@ -142,23 +186,48 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/RENDER_POZO.png" alt="">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/RENDER_POZO.png" alt="Well Render" class="glightbox"
+                      data-gallery="renders-gallery" data-title="Well Render"
+                      href="assets/img/portfolio/fantown/RENDER_POZO.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/RENDER_YUNQUE_CALDERO.png" alt="">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/RENDER_YUNQUE_CALDERO.png" alt="Anvil and Cauldron Render"
+                      class="glightbox" data-gallery="renders-gallery" data-title="Anvil and Cauldron Render"
+                      href="assets/img/portfolio/fantown/RENDER_YUNQUE_CALDERO.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/RENDER_PUEBLO.png" alt="">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/RENDER_PUEBLO.png" alt="Town Render" class="glightbox"
+                      data-gallery="renders-gallery" data-title="Town Render"
+                      href="assets/img/portfolio/fantown/RENDER_PUEBLO.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/RENDER_MOLINO.png" alt="">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/RENDER_MOLINO.png" alt="Windmill Render" class="glightbox"
+                      data-gallery="renders-gallery" data-title="Windmill Render"
+                      href="assets/img/portfolio/fantown/RENDER_MOLINO.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/RENDER_CASA.png" alt="">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/RENDER_CASA.png" alt="House Render" class="glightbox"
+                      data-gallery="renders-gallery" data-title="House Render"
+                      href="assets/img/portfolio/fantown/RENDER_CASA.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
                 </div>
 
               </div>
@@ -173,15 +242,14 @@
                 <li><strong>Category</strong>: 3D Art and Animation</li>
                 <li><strong>Project date</strong>: May, 2024</li>
                 <li><strong>Tools</strong>: <img src="assets/icons8/icons8-3ds-max.svg"><img src="assets/icons8/icons8-unidad.svg"></li>
+                <li><strong>Project URL</strong>: <a href="https://github.com/carlossantayana/Fantown_CarlosSantayanaVicente">Fantown GitHub Repository</a></li>
               </ul>
             </div>
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Exercitationem repudiandae officiis neque suscipit</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia.
-                Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia
-                accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt
-                eius.
+              <h2>Fantown 3D Art</h2>
+              <p style="text-align: justify;">
+                3D Animation project with Unity. Animations were created with 3Ds MAX and imported to Unity, except the
+                ones based on physics simulation.
               </p>
             </div>
           </div>
@@ -193,7 +261,7 @@
     </section><!-- /Portfolio Details Section -->
 
     <!-- Starter Section Section -->
-    <section id="starter-section" class="portfolio-details section">
+    <section id="starter-section" class="portfolio-details section light-background">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -201,89 +269,159 @@
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up">
-      
+
         <div class="row gy-4">
-      
+
           <div class="col-lg-2"></div>
-          
+
           <div class="col-lg-8">
-      
+
             <div class="portfolio-details-slider swiper init-swiper">
-      
+
               <script type="application/json" class="swiper-config">
-                  {
-                    "loop": true,
-                    "speed": 600,
-                    "autoplay": {
-                      "delay": 5000
-                    },
-                    "slidesPerView": "auto",
-                    "pagination": {
-                      "el": ".swiper-pagination",
-                      "type": "bullets",
-                      "clickable": true
-                    }
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
                   }
-                </script>
-      
+                }
+              </script>
+
               <div class="swiper-wrapper align-items-center">
-      
+
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/casa.png" alt="">
-                </div>
-      
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/molino.png" alt="">
-                </div>
-      
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/farola.png" alt="">
-                </div>
-      
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/pozo.png" alt="">
-                </div>
-      
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/yunque.png" alt="">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/casa.png" alt="House Model" class="glightbox"
+                      data-gallery="environment-models-gallery" data-title="House Model"
+                      href="assets/img/portfolio/fantown/casa.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/caldero.png" alt="">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/molino.png" alt="Windmill Model" class="glightbox"
+                      data-gallery="environment-models-gallery" data-title="Windmill Model"
+                      href="assets/img/portfolio/fantown/molino.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/cartel.png" alt="">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/farola.png" alt="Street Lamp Model" class="glightbox"
+                      data-gallery="environment-models-gallery" data-title="Street Lamp Model"
+                      href="assets/img/portfolio/fantown/farola.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/caja.png" alt="">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/pozo.png" alt="Well Model" class="glightbox"
+                      data-gallery="environment-models-gallery" data-title="Well Model"
+                      href="assets/img/portfolio/fantown/pozo.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/barril.png" alt="">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/yunque.png" alt="Anvil Model" class="glightbox"
+                      data-gallery="environment-models-gallery" data-title="Anvil Model"
+                      href="assets/img/portfolio/fantown/yunque.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/arbol.png" alt="">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/caldero.png" alt="Cauldron Model" class="glightbox"
+                      data-gallery="environment-models-gallery" data-title="Cauldron Model"
+                      href="assets/img/portfolio/fantown/caldero.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/hierba.png" alt="">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/cartel.png" alt="Signpost Model" class="glightbox"
+                      data-gallery="environment-models-gallery" data-title="Signpost Model"
+                      href="assets/img/portfolio/fantown/cartel.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/rocas.png" alt="">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/caja.png" alt="Box Model" class="glightbox"
+                      data-gallery="environment-models-gallery" data-title="Box Model"
+                      href="assets/img/portfolio/fantown/caja.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/roquitas.png" alt="">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/barril.png" alt="Barrel Model" class="glightbox"
+                      data-gallery="environment-models-gallery" data-title="Barrel Model"
+                      href="assets/img/portfolio/fantown/barril.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fantown/paloma.png" alt="">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/arbol.png" alt="Tree Model" class="glightbox"
+                      data-gallery="environment-models-gallery" data-title="Tree Model"
+                      href="assets/img/portfolio/fantown/arbol.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
                 </div>
-      
+
+                <div class="swiper-slide">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/hierba.png" alt="Grass Model" class="glightbox"
+                      data-gallery="environment-models-gallery" data-title="Grass Model"
+                      href="assets/img/portfolio/fantown/hierba.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/rocas.png" alt="Rocks Model" class="glightbox"
+                      data-gallery="environment-models-gallery" data-title="Rocks Model"
+                      href="assets/img/portfolio/fantown/rocas.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/roquitas.png" alt="Small Rocks Model" class="glightbox"
+                      data-gallery="environment-models-gallery" data-title="Small Rocks Model"
+                      href="assets/img/portfolio/fantown/roquitas.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/fantown/paloma.png" alt="Dove Model" class="glightbox"
+                      data-gallery="environment-models-gallery" data-title="Dove Model"
+                      href="assets/img/portfolio/fantown/paloma.png">
+                    <i class="bi bi-zoom-in magnify-icon"></i>
+                  </div>
+                </div>
+
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -302,15 +440,15 @@
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up">
-      
+
         <div class="row gy-4">
-      
+
           <div class="col-lg-2"></div>
-          
+
           <div class="col-lg-8">
-      
+
             <div class="portfolio-details-slider swiper init-swiper">
-      
+
               <script type="application/json" class="swiper-config">
                   {
                     "loop": true,
@@ -326,17 +464,17 @@
                     }
                   }
                 </script>
-      
+
               <div class="swiper-wrapper align-items-center">
-      
+
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/fantown/personaje.png" alt="">
                 </div>
-      
+
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/fantown/espada.png" alt="">
                 </div>
-      
+
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -347,7 +485,7 @@
     </section><!-- /Starter Section Section -->
 
     <!-- Starter Section Section -->
-    <section id="starter-section" class="portfolio-details section">
+    <section id="starter-section" class="portfolio-details section light-background">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -355,15 +493,15 @@
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up">
-      
+
         <div class="row gy-4">
-      
+
           <div class="col-lg-2"></div>
-          
+
           <div class="col-lg-8">
-      
+
             <div class="portfolio-details-slider swiper init-swiper">
-      
+
               <script type="application/json" class="swiper-config">
                   {
                     "loop": true,
@@ -379,13 +517,13 @@
                     }
                   }
                 </script>
-      
+
               <div class="swiper-wrapper align-items-center">
-      
+
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/fantown/rigging.png" alt="">
                 </div>
-      
+
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/fantown/skinning.png" alt="">
                 </div>
@@ -397,7 +535,7 @@
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/fantown/facial.png" alt="">
                 </div>
-      
+
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -416,15 +554,15 @@
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up">
-      
+
         <div class="row gy-4">
-      
+
           <div class="col-lg-2"></div>
-          
+
           <div class="col-lg-8">
-      
+
             <div class="portfolio-details-slider swiper init-swiper">
-      
+
               <script type="application/json" class="swiper-config">
                   {
                     "loop": true,
@@ -440,13 +578,13 @@
                     }
                   }
                 </script>
-      
+
               <div class="swiper-wrapper align-items-center">
-      
+
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/fantown/banderas.png" alt="">
                 </div>
-      
+
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/fantown/banderasf.png" alt="">
                 </div>
@@ -458,7 +596,7 @@
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/fantown/cintaf.png" alt="">
                 </div>
-      
+
               </div>
               <div class="swiper-pagination"></div>
             </div>
