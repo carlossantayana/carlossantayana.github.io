@@ -1205,10 +1205,36 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
+.portfolio-details .portfolio-details-slider .image-container{
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+}
+
 .portfolio-details .portfolio-details-slider img {
-  width: 100%;
+  max-width: 100%;
   max-height: 720px; /* Cambia 400px a la altura máxima que desees */
   object-fit: contain; /* Ajusta la imagen manteniendo su proporción sin recortarla */
+}
+
+.portfolio-details .portfolio-details-slider .magnify-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  /* Ajusta el tamaño según lo necesario */
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.portfolio-details .portfolio-details-slider .image-container:hover .magnify-icon {
+  opacity: 1;
+}
+
+.portfolio-details .portfolio-details-slider .image-container:hover .magnify-icon:hover {
+  color: var(--accent-color);
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination {
