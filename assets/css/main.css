@@ -1292,6 +1292,22 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
+.iframe-container {
+  display: flex; /* Flexbox para centrar */
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Adapta al ancho del contenedor padre */
+  max-width: 100%; /* Limita a su tamaño máximo */
+  overflow: hidden; /* Asegura que no haya desbordamiento */
+}
+
+.iframe-container iframe {
+  width: 100%; /* Escala proporcionalmente al ancho */
+  max-width: 552px; /* Tamaño original máximo */
+  height: auto; /* Ajusta la altura proporcionalmente */
+  border: none;
+}
+
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
