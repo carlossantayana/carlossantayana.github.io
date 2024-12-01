@@ -833,9 +833,9 @@ section,
 
 .portfolio .portfolio-content img {
   transition: 0.3s;
-  width: 100%;
-  height: 300px; /* Ajusta esta altura según tus necesidades */
-  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16/9; /* Cambia la relación según tu preferencia */
 }
 
 .portfolio .portfolio-content .portfolio-info {
