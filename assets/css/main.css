@@ -1221,6 +1221,13 @@ section,
   object-fit: contain; /* Ajusta la imagen manteniendo su proporción sin recortarla */
 }
 
+.image-container iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9; /* Mantiene la relación de aspecto */
+  border: none; /* Elimina bordes */
+}
+
 .image-container .magnify-icon {
   position: absolute;
   top: 50%;
