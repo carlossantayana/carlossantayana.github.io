@@ -1389,3 +1389,25 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+  border-radius: 50%; /* Hacerlos redondos */
+  width: 40px; /* Ajustar el tamaño */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: white; /* Color de las flechas */
+  font-size: 16px; /* Tamaño de las flechas */
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo más opaco al hacer hover */
+}
