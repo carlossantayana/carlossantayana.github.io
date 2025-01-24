@@ -1411,3 +1411,7 @@ section,
 .swiper-button-next:hover {
   background-color: rgba(0, 0, 0, 0.8); /* Fondo más opaco al hacer hover */
 }
+
+.gslide-media img {
+  background-color: rgb(240, 240, 240);
+}
